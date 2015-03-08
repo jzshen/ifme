@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ally_permissions
+
   resources :alerts
 
   resources :allies, :except => [:show, :new, :create, :edit, :update, :destroy] do

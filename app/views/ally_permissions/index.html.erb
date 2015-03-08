@@ -1,0 +1,23 @@
+<h1>Listing ally_permissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ally_permissions.each do |ally_permission| %>
+      <tr>
+        <td><%= link_to 'Show', ally_permission %></td>
+        <td><%= link_to 'Edit', edit_ally_permission_path(ally_permission) %></td>
+        <td><%= link_to 'Destroy', ally_permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ally permission', new_ally_permission_path %>

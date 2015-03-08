@@ -1,4 +1,5 @@
 class Ally < ActiveRecord::Base
+	has_many :ally_permissions
 	attr_accessible :userid1, :userid2, :status
 	enum status: [:accepted, :pending_from_userid1, :pending_from_userid2]
 

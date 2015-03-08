@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :ally_permission do
+    
+  end
+
   factory :user1, class: User do
     name "Oprah Chang"
     email "oprah.chang@example.com"
