@@ -1,4 +1,4 @@
 class AllyPermission < ActiveRecord::Base
-	#belongs_to: allies
+	belongs_to: allies
 
 end

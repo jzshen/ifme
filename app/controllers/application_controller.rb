@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
 			else
 				return_this = Category.where(:id => item.to_i).first.name
 			end
-			if item != data.category.last
+			if item != data.category.last 
 				return_this += ', '
 			end
 		elsif taxonomy == "mood" && Mood.where(:id => item.to_i).exists?
