@@ -32,24 +32,25 @@
       </div>
       <div class="field">
         <div class="label"><%= f.label 'Allow Comments?' %></div>
-        <%= f.radio_button(:comment, true) %>Yes
+        <%= f.radio_button(:comment, true, checked: true) %>Yes
         <%= f.radio_button(:comment, false) %>No
       </div>
+
       <div class="field">
         <div class="label"><%= f.label :viewers %></div>
-        <%= f.radio_button(:viewers, true) %>Allies<br>
-        <%= f.radio_button(:viewers, false) %>Only Me<br>
-        <%= f.radio_button(:viewers, false) %>Custom<br>
+        <%= f.radio_button(:post_type, 1, checked: true) %>Allies<br>
+        <%= f.radio_button(:post_type, 2) %>Only Me<br>
+       <!-- <%#= f.radio_button(:viewers, false) %>Custom<br>-->
  
  
-	
+<%if false%>	
         <% @viewers.each do |item| %>
           <%= f.check_box(:viewers, {:multiple => true, :checked => @trigger.viewers.include?(item)}, item, nil) %>
           <%= User.where(:id => item).first.name %><br>
         <% end %>
-	
-
+<%end%>
       </div>
+
     </div>
     <div class="table_cell">
       <div class="field">

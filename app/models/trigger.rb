@@ -5,6 +5,7 @@ class Trigger < ActiveRecord::Base
 	serialize :mood, Array
 	serialize :strategies, Array
 	validates :comment, inclusion: [true, false]
+	#validates :post_type, inclusion: [1, 2]
 	validates_presence_of :userid, :name, :why
 	validates_length_of :why, :minimum => 1, :maximum => 2000
 	validates_length_of :fix, :maximum => 2000
